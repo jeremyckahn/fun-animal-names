@@ -1,15 +1,13 @@
-import { animalNames as defaultAnimalNames } from './data/animal-names';
-import { adjectives as defaultAdjectives } from './data/adjectives';
+import { animalNames as defaultAnimalNames } from './data/animal-names'
+import { adjectives as defaultAdjectives } from './data/adjectives'
 
 const convertStringToInteger = (str: string) => {
-  return str
-    .split('')
-    .reduce((acc, char, i) => acc + char.charCodeAt(0) * i, 0);
-};
+  return str.split('').reduce((acc, char, i) => acc + char.charCodeAt(0) * i, 0)
+}
 
 export interface FunAnimalNameConfig {
-  animalNames?: string[];
-  adjectives?: string[];
+  animalNames?: string[]
+  adjectives?: string[]
 }
 
 export const funAnimalName = (
@@ -19,12 +17,12 @@ export const funAnimalName = (
     animalNames = defaultAnimalNames,
   }: FunAnimalNameConfig = {}
 ) => {
-  const hashNumber = convertStringToInteger(stringToHash);
-  const adjective = adjectives[hashNumber % adjectives.length];
-  const adjectiveNumberValue = convertStringToInteger(adjective);
+  const hashNumber = convertStringToInteger(stringToHash)
+  const adjective = adjectives[hashNumber % adjectives.length]
+  const adjectiveNumberValue = convertStringToInteger(adjective)
 
   const animal =
-    animalNames[(hashNumber + adjectiveNumberValue) % animalNames.length];
+    animalNames[(hashNumber + adjectiveNumberValue) % animalNames.length]
 
-  return `${adjective} ${animal}`;
-};
+  return `${adjective} ${animal}`
+}

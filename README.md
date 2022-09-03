@@ -5,22 +5,22 @@ This module hashes strings into fun animal names.
 This project was scaffolded with [TSDX](https://tsdx.io/).
 
 ```ts
-import { funAnimalName } from 'fun-animal-names';
+import { funAnimalName } from 'fun-animal-names'
 
-const name = funAnimalName('abc123');
-console.log(name); // 'Perfect Duck'
+const name = funAnimalName('abc123')
+console.log(name) // 'Perfect Duck'
 ```
 
 You can also specify the set of animal names and adjectives to use:
 
 ```ts
-import { funAnimalName } from 'fun-animal-names';
+import { funAnimalName } from 'fun-animal-names'
 
 const name = funAnimalName('abc123', {
   adjectives: ['Happy'],
   animalNames: ['Goldfish'],
-});
-console.log(name); // 'Happy Goldfish'
+})
+console.log(name) // 'Happy Goldfish'
 ```
 
 ### Jest
