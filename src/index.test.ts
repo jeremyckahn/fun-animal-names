@@ -1,4 +1,4 @@
-import { funAnimalName } from '../src';
+import { funAnimalName } from '.';
 
 describe('funAnimalName', () => {
   test('creates a fun animal name', () => {
